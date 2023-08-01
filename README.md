@@ -1,3 +1,5 @@
+[![.NET](https://github.com/he1a2s0/FuckCalibri.net/actions/workflows/dotnet.yml/badge.svg)](https://github.com/he1a2s0/FuckCalibri.net/actions/workflows/dotnet.yml)
+
 ### 原项目：
 
 - https://github.com/zhmjx/FuckCalibri
