@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net46</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+	<LangVersion>latest</LangVersion>
+	<VersionPrefix>0.0.1</VersionPrefix>
+	<VersionSuffix>rc.1</VersionSuffix>
+	<EmbeddedResourceUseDependentUponConvention>true</EmbeddedResourceUseDependentUponConvention>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\fuckcalibri.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\fuckcalibri.ico" />
+  </ItemGroup>
+
+</Project>
