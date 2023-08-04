@@ -26,8 +26,8 @@ namespace FuckCalibri {
             base.DefWndProc(ref m);
 
             if (SingleInstanceHelper.ReactToNotification && SingleInstanceHelper.IsMutextMessage(m.Msg)) {
-				if(!Visible)
-					Show();
+                if (!Visible)
+                    Show();
                 Activate();
             }
         }
@@ -40,10 +40,10 @@ namespace FuckCalibri {
 
         private readonly Dictionary<string, bool> _patchedProcessNames = Constants.TargetProcessNames.ToDictionary(_ => _.Key, _ => false, StringComparer.OrdinalIgnoreCase);
 
-        internal void UpdatePatchingState(bool patched, string message, string processName) {
+        internal int UpdatePatchingState(bool patched, string message, string processName) {
             if (InvokeRequired) {
-                Invoke(UpdatePatchingState, patched, message, processName);
-                return;
+                var returnValue = Invoke(UpdatePatchingState, patched, message, processName);
+                return returnValue == null ? 0 : int.Parse(returnValue.ToString());
             }
 
             _patchedProcessNames[processName] = patched;
@@ -57,6 +57,8 @@ namespace FuckCalibri {
                 checkBox.ForeColor = numOfSuccessful == total ? Color.Red :
                 numOfSuccessful == 0 ? Color.Gray : Color.DimGray;
             }
+
+            return numOfSuccessful;
         }
 
         private IEnumerable<string> GetPatchedProcessNames() {

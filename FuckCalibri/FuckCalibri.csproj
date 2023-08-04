@@ -11,11 +11,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Resources\fuckcalibri.ico" />
+    <None Remove="Resources\*.ico" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Resources\fuckcalibri.ico" />
+    <EmbeddedResource Include="Resources\*.ico" />
   </ItemGroup>
 
 </Project>

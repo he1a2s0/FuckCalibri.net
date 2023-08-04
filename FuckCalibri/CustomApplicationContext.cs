@@ -53,7 +53,13 @@ namespace FuckCalibri {
         }
 
         private void OnenoteMemoryPatcher_PatchingStateChanged(object sender, PatchingStateChangedEventArgs e) {
-            _mainForm.UpdatePatchingState(e.IsPatched, e.Message, e.ProcessName);
+            var numOfPatched = _mainForm.UpdatePatchingState(e.IsPatched, e.Message, e.ProcessName);
+            if (numOfPatched == 0)
+                SetIconForTrayIcon("gray");
+            else if (numOfPatched == 1)
+                SetIconForTrayIcon("green");
+            else
+                SetIconForTrayIcon("blue");
         }
 
         private void CustomApplicationContext_ThreadExit(object sender, EventArgs e) {
@@ -72,13 +78,17 @@ namespace FuckCalibri {
                 Visible = true
             };
 
-            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("FuckCalibri.Resources.fuckcalibri.ico")) {
+            SetIconForTrayIcon("fuckcalibri");
+
+            _trayIcon.MouseClick += Toggle;
+        }
+
+        private void SetIconForTrayIcon(string iconColor) {
+            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream($"FuckCalibri.Resources.fuckcalibri-{iconColor}.ico")) {
                 if (stream != null) {
                     _trayIcon.Icon = new Icon(stream);
                 }
             }
-
-            _trayIcon.MouseClick += Toggle;
         }
 
         void Show(object sender, EventArgs e) {
