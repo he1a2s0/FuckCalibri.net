@@ -26,6 +26,8 @@ namespace FuckCalibri {
             base.DefWndProc(ref m);
 
             if (SingleInstanceHelper.ReactToNotification && SingleInstanceHelper.IsMutextMessage(m.Msg)) {
+				if(!Visible)
+					Show();
                 Activate();
             }
         }
