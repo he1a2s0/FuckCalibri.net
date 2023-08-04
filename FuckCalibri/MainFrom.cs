@@ -61,10 +61,6 @@ namespace FuckCalibri {
             return numOfSuccessful;
         }
 
-        private IEnumerable<string> GetPatchedProcessNames() {
-            return _patchedProcessNames.Where(_ => _.Value && Constants.TargetProcessNames.ContainsKey(_.Key)).Select(_ => Constants.TargetProcessNames[_.Key]);
-        }
-
         private CheckBox GetCheckBox(string processName) {
             return _checkBoxes.FirstOrDefault(_ => processName.Equals(Convert.ToString(_.Tag), StringComparison.OrdinalIgnoreCase));
         }

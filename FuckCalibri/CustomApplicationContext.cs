@@ -19,7 +19,7 @@ namespace FuckCalibri {
         private readonly CancellationTokenSource _cancellationTokenSource;
         private readonly OnenoteMemoryPatcher _onenoteMemoryPatcher;
 
-        public CustomApplicationContext(MainForm mainForm, bool showMainWindow = false, bool silent = true) : base() {
+        public CustomApplicationContext(MainForm mainForm, bool showMainWindow = false) : base() {
             _mainForm = mainForm;
 
             Current = this;
@@ -78,7 +78,7 @@ namespace FuckCalibri {
                 Visible = true
             };
 
-            SetIconForTrayIcon("fuckcalibri");
+            SetIconForTrayIcon("gray");
 
             _trayIcon.MouseClick += Toggle;
         }

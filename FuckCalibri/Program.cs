@@ -23,7 +23,7 @@ namespace FuckCalibri {
 
             var showMainWindow = cmdLineArgs.Length > 0 && cmdLineArgs.Contains(Constants.LaunchArguments.Show, StringComparer.OrdinalIgnoreCase);
 
-            Application.Run(new CustomApplicationContext(new MainForm(), showMainWindow, silent));
+            Application.Run(new CustomApplicationContext(new MainForm(), showMainWindow));
         }
     }
 }

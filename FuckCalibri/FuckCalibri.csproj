@@ -9,6 +9,7 @@
 	<VersionSuffix></VersionSuffix>
 	<EmbeddedResourceUseDependentUponConvention>true</EmbeddedResourceUseDependentUponConvention>
 	<ApplicationIcon>Resources\fuckcalibri-blue.ico</ApplicationIcon>
+	<AssemblyName>FuckCalibri.net-v$(VersionPrefix)</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
