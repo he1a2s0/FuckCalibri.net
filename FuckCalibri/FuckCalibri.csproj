@@ -8,6 +8,7 @@
 	<VersionPrefix>1.0.1</VersionPrefix>
 	<VersionSuffix></VersionSuffix>
 	<EmbeddedResourceUseDependentUponConvention>true</EmbeddedResourceUseDependentUponConvention>
+	<ApplicationIcon>Resources\fuckcalibri-blue.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
