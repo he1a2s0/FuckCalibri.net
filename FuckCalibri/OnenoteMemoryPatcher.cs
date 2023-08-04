@@ -25,13 +25,11 @@ namespace FuckCalibri {
 
         public event EventHandler<PatchingStateChangedEventArgs> PatchingStateChanged;
 
-        private void OnAllPatchingStateChanged(bool patched, string message) {
-            foreach (var pair in _targetProcesses) {
+        private void OnAllPatchingFailed(string message) {
+            foreach (var key in _targetProcesses.Keys.ToList()) {
+                _targetProcesses[key] = 0;
 
-                if (!patched)
-                    _targetProcesses[pair.Key] = 0;
-
-                PatchingStateChanged?.Invoke(this, new PatchingStateChangedEventArgs { ProcessName = pair.Key, IsPatched = patched, Message = message });
+                PatchingStateChanged?.Invoke(this, new PatchingStateChangedEventArgs { ProcessName = key, IsPatched = false, Message = message });
             }
         }
 
@@ -59,7 +57,7 @@ namespace FuckCalibri {
                 var processes = GetTargetProcesses();
 
                 if (processes.Count == 0) { //没有Onenote进程运行
-                    OnAllPatchingStateChanged(false, "Onenote进程未运行");
+                    OnAllPatchingFailed("Onenote进程未运行");
                     await Task.Delay(1000, cancellationToken);
                     continue;
                 }

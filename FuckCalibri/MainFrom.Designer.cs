@@ -60,6 +60,7 @@
             this.checkBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkBox1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
             this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.checkBox1.ForeColor = System.Drawing.Color.Gray;
             this.checkBox1.Location = new System.Drawing.Point(81, 1);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(1);
             this.checkBox1.Name = "checkBox1";
@@ -104,6 +105,7 @@
             this.checkBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkBox2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
             this.checkBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.checkBox2.ForeColor = System.Drawing.Color.Gray;
             this.checkBox2.Location = new System.Drawing.Point(81, 27);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(1);
             this.checkBox2.Name = "checkBox2";
