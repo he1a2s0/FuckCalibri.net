@@ -45,8 +45,8 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.Size = new System.Drawing.Size(464, 281);
             this.tableLayoutPanel1.TabIndex = 0;
@@ -64,7 +64,7 @@
             this.checkBox1.Location = new System.Drawing.Point(81, 1);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(1);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(382, 24);
+            this.checkBox1.Size = new System.Drawing.Size(382, 22);
             this.checkBox1.TabIndex = 4;
             this.checkBox1.TabStop = false;
             this.checkBox1.Text = "checkBox1";
@@ -78,7 +78,7 @@
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
             this.tableLayoutPanel1.SetRowSpan(this.label1, 2);
-            this.label1.Size = new System.Drawing.Size(74, 52);
+            this.label1.Size = new System.Drawing.Size(74, 48);
             this.label1.TabIndex = 0;
             this.label1.Text = "当前状态：";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -89,10 +89,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.richTextBox1, 2);
-            this.richTextBox1.Location = new System.Drawing.Point(3, 55);
+            this.richTextBox1.Location = new System.Drawing.Point(3, 51);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(458, 223);
+            this.richTextBox1.Size = new System.Drawing.Size(458, 227);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
@@ -106,10 +106,10 @@
             this.checkBox2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Silver;
             this.checkBox2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.checkBox2.ForeColor = System.Drawing.Color.Gray;
-            this.checkBox2.Location = new System.Drawing.Point(81, 27);
+            this.checkBox2.Location = new System.Drawing.Point(81, 25);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(1);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(382, 24);
+            this.checkBox2.Size = new System.Drawing.Size(382, 22);
             this.checkBox2.TabIndex = 3;
             this.checkBox2.TabStop = false;
             this.checkBox2.Text = "checkBox2";

@@ -120,10 +120,13 @@
   <data name="richTextBox1.Text" xml:space="preserve">
     <value>原项目： https://github.com/zhmjx/FuckCalibri
 ------------------------------------------------
-我做了一个.net版本(C#, .NET Framework 4.6)的实现：https://github.com/he1a2s0/FuckCalibri.net
+本项目是使用.net(C#, .NET Framework 4.6)实现的版本，地址 https://github.com/he1a2s0/FuckCalibri.net
 主要的改动包括：
-• 启动后显示托盘图标
-• 当前状态显示
+• 启动后添加托盘图标（托盘图标根据状态变色）
+• 添加关于窗体、添加当前状态显示
+• 支持启动参数：
+    • /show: 程序启动时显示主窗口（关于窗口）。
+    • /silent: 静默模式（针对多实例检测），重复运行程序时不显示通知
 已知问题：
 • 不能检测是否已生效（因此当找不到匹配的内存字节序列时，会当作已生效）</value>
   </data>
